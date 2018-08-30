@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  ethereum-playground:
+    image: jairsjunior/ethereum-playground
+    build: ./ethereum-playground/react-app
+    environment:
+     - MQTT_PROTOCOL=ws
+     - MQTT_HOST=localhost
+     - MQTT_PORT=3010
+    #  - MQTT_CONTEXT=
+    ports:
+     - "3000:2015"
+
